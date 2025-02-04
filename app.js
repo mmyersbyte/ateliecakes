@@ -1,4 +1,4 @@
-
+//zapzap
     const whatsAppButton = document.createElement('div');
     whatsAppButton.innerHTML = `
         <a href="https://wa.me/+5585996693878" target="_blank" style="text-decoration: none;">
@@ -17,7 +17,7 @@
                 animation: float 3s ease-in-out infinite;
                 z-index: 1000;
                 cursor: pointer;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="iconeZap" style="width: 30px; height: 30px;">
             </div>
         </a>
     `;
@@ -46,7 +46,7 @@
 
 
 
-
+//carinhoo
 
 const cartItemsMobile = document.getElementById('cart-items-mobile');
 const cartTotalMobile = document.getElementById('cart-total-mobile');
@@ -60,7 +60,7 @@ function addItemToCart(name, price) {
   const existingItem = cart.find(item => item.name === name);
 
   if (existingItem) {
-    existingItem.quantity += 1; // Aumenta a quantidade se o item já existir
+    existingItem.quantity += 1; // Aumenta a quantidade 
   } else {
     cart.push({ name, price, quantity: 1 }); // Adiciona o item com quantidade 1 se não existir
   }
@@ -165,3 +165,21 @@ addToCartButtons.forEach(button => {
 
 // Add evento de click ao botao "Limpar Carrinho" 
 clearCartButton.addEventListener('click', clearCart);
+
+
+
+///////// checkouttttttttttttttttttttttttttttttttttttttttt
+const checkoutMobileButton = document.getElementById('checkout-mobile');
+checkoutMobileButton.addEventListener('click', () => {
+  if (cart.length === 0) {
+    alert('Seu carrinho está vazio. Adicione itens antes de finalizar o pedido.');
+    return;
+  }
+
+  
+  const itemsList = cart.map(item => `${item.name} (${item.quantity}x)`).join(', ');
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const message = `Eu escolhi os seguintes bolos: ${itemsList}. O valor total deu R$${total.toFixed(2)}. Há disponibilidade? Como será o pagamento?`;
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/+5585996693878?text=${encodedMessage}`, '_blank');
+});
