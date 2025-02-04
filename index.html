@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meire Rose Ateliê</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="desktop">
+    
+
+    <img class=" imagemanime" src="assets/meire.png" alt="">
+    <h1 class="tituloheader">Meire Rose Ateliê</h1>
+
+</header>
+<nav id="navDesk" class="navbar">
+  <ul class="nav-list">
+    <li><a href="https://wa.me/seu-numero" target="_blank">WhatsApp</a></li>
+    <li><a href="https://instagram.com/seu-perfil" target="_blank">Instagram</a></li>
+    <li><a href="#">Valores</a></li>
+    <li><a href="#">Bolos</a></li>
+  </ul>
+</nav>
+
+
+<!-- NAV MOBILE -->
+<nav id="mobile" class="navbar navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1 class="tituloheader">Meire Rose Ateliê</h1></a>
+    <button id="cart-icon-mobile" class="btn btn-outline-dark d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartMobile" aria-controls="offcanvasCartMobile">
+      <i class="bi bi-cart"></i>
+    </button>
+  </div> 
+</nav>
+
+
+
+<!-- Off-canvas carrinho (Moba) -->
+<div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasCartMobile" aria-labelledby="offcanvasCartMobileLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasCartMobileLabel">Carrinho de Compras</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul id="cart-items-mobile">
+      <!-- Itens do carrinho adds dinamicamente -->
+    </ul>
+    <p><strong>Total:</strong> <span id="cart-total-mobile">R$0,00</span></p>
+    <button id="clear-cart" class="btn btn-danger w-100 mb-2">Limpar Carrinho</button>
+    <button id="checkout-mobile" class="btn btn-success w-100">Finalizar Compra</button>
+    <p class="attPay">ATENÇÃO: A simulação desse carrinho é fictícia. Não faça nenhum pagamento antes de falar com a Meire Rose e consultar o prazo de entrega e a disponibilidade!</p>
+  </div>
+</div>
+
+<!-- CARROSSEL BANNER MOBA -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <!-- Primeiro Slide -->
+    <div class="carousel-item active">
+      <img src="assets/carrossel-foto1.png" class="d-block w-100" alt="Descrição da Imagem 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <!-- Segundo Slide -->
+    <div class="carousel-item">
+      <img src="assets/carrossel-foto2.png" class="d-block w-100" alt="Descrição da Imagem 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <!-- Terceiro Slide -->
+    <div class="carousel-item">
+      <img src="assets/carrossel-foto3.png" class="d-block w-100" alt="Descrição da Imagem 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Controles de Navegação -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<!-- CARDS PC -->
+<div class="container" id="desktopi">
+
+    <!-- Section 1: About with CTA -->
+    <div id="section1" class="section cta-section">
+        <div>
+            <h2>Bolos recém-assados, feitos com perfeição</h2>
+            <p>Delicie-se com nossa ampla seleção de bolos artesanais feitos com amor e <strong>ingredientes premium.</strong> Perfeito para celebrações ou simplesmente para se presentear.</p>
+            <a href="#section3" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Peça agora!</a>
+        </div>
+        <img src="assets/banner-principal.png" alt="banner princpal">
+    </div>
+<hr>
+    <!-- PREÇO E FOTOS. SEGUNDA SECTION DESK -->
+    <div id="section2" class="section prices">
+        <div class="cake-card">
+          <img src="assets/bolo3.jpeg" alt="Cake 3">
+          <h3>Chocolate Delight</h3>
+            <p>$25</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+        </div>
+        <div class="cake-card">
+          <img src="assets/bolo3.jpeg" alt="Cake 3">
+          <h3>Vanilla Dream</h3>
+            <p>$30</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+        </div>
+        <div class="cake-card">
+            <img src="assets/bolo3.jpeg" alt="Cake 3">
+            <h3>Red Velvet</h3>
+            <p>$30</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+        </div>
+        <div class="cake-card">
+          <img src="assets/bolo3.jpeg" alt="Cake 3">
+          <h3>Red Velvet</h3>
+            <p>$30</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+
+        </div>
+        <div class="cake-card">
+          <img src="assets/bolo3.jpeg" alt="Cake 3">
+          <h3>Red Velvet</h3>
+            <p>$30</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+
+        </div>
+        <div class="cake-card">
+          <img src="assets/bolo3.jpeg" alt="Cake 3">
+          <h3>Red Velvet</h3>
+            <p>$30</p>
+            <p class="p-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod quos corrupti obcaecati voluptates dolorum modi sunt aut expedita incidunt aperiam ipsa deserunt nobis, dolor omnis libero! Voluptatum, quae eaque!</p>
+            <a class="encomende-agr" href="">Garanta o seu agora</a>
+
+        </div>
+    </div>
+
+    
+    
+</div>
+
+
+
+<!-- CARDS MOBILE -->
+
+<div id="conMoba" class="container">
+  <div class="row mx-auto g-4">
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo A </div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$80,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo B</div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$30,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo C</div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$30,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo D </div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$30,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo E</div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$30,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div class="card" style="background-color: transparent;">
+        <img src="assets/bolo3.jpeg" class="card-img-top" alt="bolo">
+        <div class="card-header text-center">Bolo F</div>
+        <div class="card-body text-center">
+          <p class="price"><strong>R$30,00</strong></p>
+        </div>
+        <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<hr>
+<div id="section3" class="section order-method">
+  <h4>Descubra mais produtos e sabores e peça seu bolo via Whatsapp</h4>
+  <p class="textoF">Basta nos enviar uma mensagem com os dados do seu pedido e nós cuidaremos do resto!</p>
+  <a href="https://wa.me/+5585996693878" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Peça no WhatsApp</a>
+</div>
+
+<!-- Section 4: Redirect Buttons -->
+<div id="section4" class="section redirect-buttons">
+  <h4>Redes</h4>
+  <a href="https://wa.me/+5585996693878">WhatsApp</a>
+  <a href="">Instagram</a>
+  
+</div>
+
+
+
+<footer>
+    <p>&copy; 2025 Ateliê da Rose Meire. Todos os direitos reservados.</p>
+    <p>📍 Endereço: Bairro Maraponga - Fortaleza, Ceará</p>
+
+    <p>Desenvolvido por <a href="https://github.com/mmyersbyte" target="_blank"><i class="bi bi-github"></i></a> <a href="https://www.instagram.com/pedrovicstro" target="_blank"><i class="bi bi-instagram"></i></a>
+    
+    </p>
+  
+
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
