@@ -56,13 +56,13 @@ const clearCartButton = document.getElementById('clear-cart');
 
 let cart = [];
 
-// Funçiton para adicionar item ao carrinho
 function addItemToCart(name, price) {
   const existingItem = cart.find(item => item.name === name);
 
   if (existingItem) {
-    existingItem.quantity += 1; // Aumenta a quantidade se tiver já 1 bolo 
-    cart.push({ name, price, quantity: 1 }); // Adiciona o bolo com quantidade 1
+    existingItem.quantity += 1; // Aumenta a quantidade se o item já existir
+  } else {
+    cart.push({ name, price, quantity: 1 }); // Adiciona o item com quantidade 1 se não existir
   }
 
   updateCartMobile();
